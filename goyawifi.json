@@ -1,0 +1,26 @@
+{
+    "__extends__": "samsung.common", 
+    "__notes__": [
+    ],
+    "recovery": {
+        "make": false, 
+        "restore_stock": false,
+        "img": "imgs/twrp.img"
+    }, 
+    "device": {
+        "name": "goyawifi"
+    }, 
+    "cache": {
+        "make": false
+    }, 
+    "boot": {
+        "make": false
+    }, 
+    "update": {
+        "keys": null, 
+        "make": true, 
+        "network": {
+            "aps": []
+        }
+    }
+}
