@@ -3,7 +3,7 @@
     "__notes__": [
     ],
     "recovery": {
-        "make": false, 
+        "__make__": false, 
         "restore_stock": false,
         "img": "imgs/twrp.img"
     }, 
@@ -11,14 +11,14 @@
         "name": "goyawifi"
     }, 
     "cache": {
-        "make": false
+        "__make__": false
     }, 
     "boot": {
-        "make": false
+        "__make__": false
     }, 
     "update": {
         "keys": null, 
-        "make": true, 
+        "__make__": true, 
         "network": {
             "aps": []
         }
