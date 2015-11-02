@@ -1,0 +1,54 @@
+{
+    "__extends__": "samsung.common",
+    "__notes__": [
+        "SM-T110 (or at least hardware v2) requires a patched make_ext4fs to create a compatible cache.img",
+        "Supplied make_ext4fs is already patched, and you will find the patch file in extra/patches/patch_ext4_utils.diff",
+        "See http://forum.xda-developers.com/galaxy-tab-3/help/how-to-root-sm-t113-t3076658. Thanks to grizzlyfute"
+    ],
+    "recovery": {
+        "img": "img/recovery.img",
+        "stock": "img/recovery.img"
+    },
+    "__config__": {
+        "host": {
+            "bin": {
+                "make_ext4fs": {
+                    "arch": {
+                        "x86": "extra/bin/make_ext4fs",
+                        "x86_64": "extra/bin/make_ext4fs"
+                    }
+                }
+            }
+        },
+        "target": {
+            "device": {
+                "brand": "samsung",
+                "board": "PXA986",
+                "name": "goyawifi",
+                "manufacturer": "samsung"
+            },
+            "mount": {
+                "kernel": {
+                    "mount": "/kernel",
+                    "fs": "emmc",
+                    "dev": "/dev/block/mmcblk0p10"
+                },
+                "cache": {
+                    "mount": "/cache",
+                    "fs": "ext4",
+                    "dev": "/dev/block/mmcblk0p14"
+                },
+                "system": {
+                    "mount": "/system",
+                    "fs": "ext4",
+                    "dev": "/dev/block/mmcblk0p15"
+                },
+                "recovery": {
+                    "mount": "/recovery",
+                    "fs": "emmc",
+                    "dev": "/dev/block/mmcblk0p9"
+                }
+            }
+        }
+    }
+}
