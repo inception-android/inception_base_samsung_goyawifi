@@ -6,7 +6,7 @@
         "See http://forum.xda-developers.com/galaxy-tab-3/help/how-to-root-sm-t113-t3076658. Thanks to grizzlyfute"
     ],
     "recovery": {
-        "img": "img/recovery.img",
+        "img": "img/twrp.img",
         "stock": "img/recovery.img"
     },
     "__config__": {
